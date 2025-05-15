@@ -2,9 +2,11 @@
 
 **dmodkit** is a fast, no-fluff Discord moderation toolkit for `discord.py` bots. Plug it in, load commands, and go.
 
-> [!NOTE]
-> **Install:**
-> `pip install dmodkit`
+
+## Install:
+```bash
+pip install dmodkit
+```
 
 ## Features
 
