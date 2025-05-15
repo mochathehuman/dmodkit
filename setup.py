@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='modr',
+    name='dmodkit',
     version='1.0',
     description='Lightweight Discord moderation toolkit for discord.py bots',
-    long_description=open('README_PyPI.md', encoding='utf-8').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     author='Mocha',
     author_email='ohplot@gmail.com',
-    url='https://github.com/mochathehuman/modr',
+    url='https://github.com/mochathehuman/dmodkit',
     packages=find_packages(),
     install_requires=[
         'discord.py>=2.0.0',

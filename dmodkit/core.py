@@ -5,7 +5,7 @@ from loggingutil import LogFile, LogLevel
 import atexit
 
 logger = LogFile(
-    filename="modr.log",
+    filename="modkit.log",
     verbose=True,
     mode="text",
     include_timestamp=True,
@@ -14,7 +14,7 @@ logger = LogFile(
 
 atexit.register(lambda: logger.flush()) # flush logs prior to stop
 
-class Modr:
+class Modkit:
     def __init__(self, bot, *, config=None):
         self.bot = bot
         self.warns = {}
