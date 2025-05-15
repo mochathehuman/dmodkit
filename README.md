@@ -2,6 +2,10 @@
 
 **dmodkit** is a fast, no-fluff Discord moderation toolkit for `discord.py` bots. Plug it in, load commands, and go.
 
+> [!NOTE]
+> **Install:**
+> `pip install dmodkit`
+
 ## Features
 
 - Slash commands for:
@@ -13,7 +17,7 @@
   - Slowmode control
   - Nickname changes
   - Snipe (last deleted message)
-- Command logging via [loggingutil](https://github.com/mochathehuman/loggingutil)
+- Command logging
 - Warning history saved to `warnings.log`
 
 > [!IMPORTANT]
@@ -29,6 +33,7 @@
 
 ## Quickstart
 
+```
 import discord
 from discord.ext import commands
 from discord import app_commands
@@ -46,6 +51,7 @@ async def on_ready():
     print(f"Logged in as {client.user}")
 
 client.run("YOUR_TOKEN")
+```
 
 ## Logs
 
