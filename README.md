@@ -1,5 +1,9 @@
 # dmodkit
 
+[![PyPI version](https://img.shields.io/pypi/v/dmodkit)](https://pypi.org/project/dmodkit/)
+[![Python version](https://img.shields.io/pypi/pyversions/dmodkit)](https://pypi.org/project/dmodkit/)
+[![License](https://img.shields.io/github/license/mochathehuman/dmodkit)](https://github.com/mochathehuman/dmodkit/blob/main/LICENSE)
+
 **dmodkit** is a fast, no-fluff Discord moderation toolkit for `discord.py` bots. Plug it in, load commands, and go.
 
 
