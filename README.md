@@ -1,39 +1,38 @@
 # dmodkit
 
-**dmodkit** is a lightweight, plug-and-play Discord moderation toolkit for bots using `discord.py`. It's built for speed, simplicity, and zero bloat.
+**dmodkit** is a fast, no-fluff Discord moderation toolkit for `discord.py` bots. Plug it in, load commands, and go.
 
 ## Features
 
-- Kick / Ban
-- Warns & Strikes (with auto-kick on 3 strikes)
-- Mute (with timeout) / Unmute
-- Message Purge
-- Channel Lock / Unlock
-- Slowmode Control
-- Nickname Changes
-- Snipe (recover last deleted message)
-- Logs all commands via [loggingutil](https://github.com/mochathehuman/loggingutil)
+- Slash commands for:
+  - Kick / Ban
+  - Warns & Strikes (auto-kick on 3rd)
+  - Timeout Mute / Unmute
+  - Message Purge
+  - Channel Lock / Unlock
+  - Slowmode control
+  - Nickname changes
+  - Snipe (last deleted message)
+- Command logging via [loggingutil](https://github.com/mochathehuman/loggingutil)
 - Warning history saved to `warnings.log`
 
-> **Note:** This project requires the following packages:
+> [!IMPORTANT]
+>
+> This project requires the following packages:
 >
 > - [`discord.py`](https://pypi.org/project/discord.py/) (v2.0.0 or higher)
-> - [`loggingutil`](https://github.com/mochathehuman/loggingutil) (exactly `v1.2.2`)
+> - [`loggingutil`](https://github.com/mochathehuman/loggingutil) (v1.2.2 or higher)
 >
 > Install them using:
 >
-> pip install discord.py loggingutil==1.2.2
+> `pip install discord.py loggingutil==1.2.2`
 
 ## Quickstart
 
-Install:
-`pip install dmodkit`
-
-Example:
-```py
 import discord
 from discord.ext import commands
 from discord import app_commands
+from dmodkit import Modkit
 
 client = discord.Client(intents=discord.Intents.all())
 tree = app_commands.CommandTree(client)
@@ -47,26 +46,26 @@ async def on_ready():
     print(f"Logged in as {client.user}")
 
 client.run("YOUR_TOKEN")
-```
 
 ## Logs
 
 - Warnings: `warnings.log`
-- All commands: `modkit.log`
-- Log rotation, compression, and buffer control supported
+- Commands: `modkit.log`
+- Supports buffering, compression, and rotation
 
 ## Planned
 
-- Slash command support
 - Context menu moderation
 - AutoMod keyword filters
 - Persistent user notes
 
 ## Permissions
 
-Make sure your bot has the following:
+Ensure your bot has:
+
 - Kick Members
 - Ban Members
+- Moderate Members
 - Manage Messages
 - Manage Nicknames
-- Moderate Members
+- Manage Channels
