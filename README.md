@@ -31,17 +31,22 @@ Install:
 
 Example:
 ```py
+import discord
 from discord.ext import commands
-from dmodkit.core import Modkit
+from discord import app_commands
 
-bot = commands.Bot(command_prefix="!")
+client = discord.Client(intents=discord.Intents.all())
+tree = app_commands.CommandTree(client)
 
-mod = Modkit(bot, config={
-    "log_channel_id": 123456789012345678  # optional
-})
-mod.load_all()
+modkit = Modkit(client, tree)
+modkit.load_all()
 
-bot.run("YOUR_BOT_TOKEN")
+@client.event
+async def on_ready():
+    await tree.sync()
+    print(f"Logged in as {client.user}")
+
+client.run("YOUR_TOKEN")
 ```
 
 ## Logs
